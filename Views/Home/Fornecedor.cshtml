@@ -1,0 +1,25 @@
+<div>
+    <style>tr:nth-child(even){background-color: #D6EEEE;}tr:hover{background-color: #000000; color: #FFFFFF;}</style>
+    <table class="table table-sm  table-bordered table-sm caption-top" width="100%" >
+        <caption>Lista de Fornecedor</caption>
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>CNPJ</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.listaFornecedores)
+            {
+            <tr>
+                <th>@item.Id</th>
+                <th>@item.Nome</th>
+                <th>@item.Cnpj</th>
+                <th>@item.Email</th>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+    <h1> >>> Sistema de Controle Interno - LH Pet <<<</h1>
+        <style>tr:nth-child(even){background-color: #D6EEEE;}tr:hover{background-color: #000000; color: #FFFFFF;}</style>
+        <table class="table  table-sm  table-bordered table-sm caption-top" width="100%" >
+            <caption>Lista de Cliente</caption>
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Paciente(Pet)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.listaClientes)
+                {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <th scope="row">@item.Nome</th>
+                    <th scope="row">@item.Cpf</th>
+                    <th scope="row">@item.Email</th>
+                    <th scope="row">@item.Paciente</th>
+                </tr>
+                }
+            </tbody>
+        </table>
+</div>
